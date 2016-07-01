@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'homes#index'
+  resources :pokemon, only: [:index, :show]
   resources :pokemaster, expect: [:update, :edit]
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
